@@ -35,8 +35,8 @@ def main():
         counter = checkRepeats(counter, org_dict)
         org_dict.update({counter: {letter: letter_dict[letter]}})
     
-    for i in range(26):
-        popped_item = org_dict[25 - i].popitem()
+    for i in range(len(letter_dict)):
+        popped_item = org_dict[len(letter_dict) - 1 - i].popitem()
         print("In spot #" + str(i + 1) + "; the letter '" 
               + popped_item[0] + "' appears "
               + str(popped_item[1]) + " times")
